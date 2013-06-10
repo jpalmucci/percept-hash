@@ -76,6 +76,7 @@ public class PerceptualHash implements Serializable {
 		}
 		long ret = 0;
 		for(int j=0; j < tokens.length; j++) {
+                    if (j == bits) break;
                     ret <<= 1;
 				if ((double)tokenCounts[j] / total > tokenMeans[j]) {
 					ret |= 1;
